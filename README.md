@@ -65,6 +65,14 @@ makes it deterministic and stylable), screenshotted per frame by headless
 Chrome, and assembled into a GIF with a two-pass ffmpeg palette. Same approach
 as the `augment-ai-provider` hero, packaged as a tool.
 
+## In production
+
+Used to generate the README heroes for [badname](https://github.com/sainzs/badname),
+[reckoner](https://github.com/sainzs/reckoner), [registro](https://github.com/sainzs/registro),
+[opencode-anthropic-auth-plus](https://github.com/sainzs/opencode-anthropic-auth-plus),
+[santiagosainz-skills](https://github.com/sainzs/santiagosainz-skills), and
+[augment-ai-provider](https://github.com/sainzs/augment-ai-provider).
+
 ## License
 
 MIT
