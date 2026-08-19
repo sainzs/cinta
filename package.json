@@ -1,0 +1,47 @@
+{
+  "name": "cinta",
+  "version": "0.1.0",
+  "description": "Animated terminal-capture GIFs for documentation — a pi extension",
+  "type": "module",
+  "pi": {
+    "extensions": [
+      "./src/index.ts"
+    ]
+  },
+  "files": [
+    "src/",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "pi-package",
+    "pi-extension",
+    "terminal",
+    "gif",
+    "screencast",
+    "asciicast",
+    "documentation"
+  ],
+  "license": "MIT",
+  "repository": "github:sainzs/cinta",
+  "dependencies": {
+    "puppeteer-core": "^25.8.0"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*",
+    "@earendil-works/pi-ai": "*"
+  },
+  "devDependencies": {
+    "@earendil-works/pi-ai": "*",
+    "@earendil-works/pi-coding-agent": "*",
+    "@types/node": "^24.0.0",
+    "typebox": "^1.0.0",
+    "typescript": "^5.9.0"
+  }
+}
