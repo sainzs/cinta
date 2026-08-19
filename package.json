@@ -1,6 +1,6 @@
 {
   "name": "@ssainzs/cinta",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Animated terminal-capture GIFs for documentation — a pi extension",
   "type": "module",
   "pi": {
@@ -31,7 +31,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sainzs/cinta.git"
+    "url": "https://github.com/sainzs/cinta"
   },
   "dependencies": {
     "puppeteer-core": "^25.8.0"

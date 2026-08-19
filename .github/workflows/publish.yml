@@ -5,12 +5,15 @@ on:
     types: [published]
 
 permissions:
-  id-token: write   # npm provenance (OIDC trusted publishing)
+  id-token: write
   contents: read
 
 jobs:
   publish:
     runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -20,4 +23,4 @@ jobs:
       - run: npm ci --ignore-scripts
       - run: npx tsc --noEmit
       - name: Publish with provenance
-        run: npm publish --access public --provenance
+        run: npm publish --access public
