@@ -9,6 +9,12 @@ colors and font.
 ## Install
 
 ```bash
+pi install npm:@ssainzs/cinta
+```
+
+Or from source:
+
+```bash
 pi install git:github.com/sainzs/cinta
 ```
 

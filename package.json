@@ -1,6 +1,6 @@
 {
   "name": "@ssainzs/cinta",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Animated terminal-capture GIFs for documentation — a pi extension",
   "type": "module",
   "pi": {
