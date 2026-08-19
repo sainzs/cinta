@@ -57,8 +57,16 @@ function buildHtml(script, opts) {
   const c = { ...DEFAULTS.colors, ...(opts.colors ?? {}) };
   const t = { ...DEFAULTS.timing, ...(opts.timing ?? {}) };
   const font = opts.font ?? DEFAULTS.font;
-  const subHtml = (opts.sub ?? []).join("<br />");
+  // Escape interpolated strings. `sub` may carry intended <b>/<i> formatting,
+  // so escape everything, then re-allow a small set of formatting tags.
   const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;");
+  const escSub = (s) =>
+    String(s)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/&lt;(\/?)(b|i|em|strong|code)&gt;/g, "<$1$2>");
+  const subHtml = (opts.sub ?? []).map(escSub).join("<br />");
   return `<!doctype html><html><head><meta charset="utf-8"><style>
 *{box-sizing:border-box}html,body{margin:0;padding:0;background:${c.bg}}
 body{font-family:${font};color:${c.ink};padding:48px 56px;-webkit-font-smoothing:antialiased}
@@ -82,7 +90,7 @@ body{font-family:${font};color:${c.ink};padding:48px 56px;-webkit-font-smoothing
 <div class="term-body" id="body"></div></div>
 <script>
 const body=document.getElementById("body");
-const SCRIPT=${JSON.stringify(script)};
+const SCRIPT=${JSON.stringify(script).replace(/</g, "\\u003c")};
 const TYPE_MS=${t.typeMs},LINE_MS=${t.lineMs},AFTER_CMD=${t.afterCmdMs},END_HOLD=${t.endHoldMs};
 let cursor=null;
 const wait=(ms)=>new Promise(r=>setTimeout(r,ms));
