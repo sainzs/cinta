@@ -1,5 +1,7 @@
 # cinta
 
+[![npm](https://img.shields.io/npm/v/@ssainzs/cinta?color=00ffb2&label=npm)](https://www.npmjs.com/package/@ssainzs/cinta) [![pi](https://img.shields.io/badge/pi-extension-black)](https://github.com/sainzs/cinta)
+
 Animated terminal-capture GIFs for documentation — from inside pi. The agent
 writes the terminal script conversationally, you get a self-typing GIF in your
 colors and font.
@@ -9,13 +11,7 @@ colors and font.
 ## Install
 
 ```bash
-pi install npm:@ssainzs/cinta
-```
-
-Or from source:
-
-```bash
-pi install git:github.com/sainzs/cinta
+pi install npm:@ssainzs/cinta  # or pi install git:github.com/sainzs/cinta
 ```
 
 Requires Chrome (`brew install --cask google-chrome`) and `ffmpeg`
