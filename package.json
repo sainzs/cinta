@@ -29,7 +29,10 @@
     "documentation"
   ],
   "license": "MIT",
-  "repository": "github:sainzs/cinta",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sainzs/cinta.git"
+  },
   "dependencies": {
     "puppeteer-core": "^25.8.0"
   },
