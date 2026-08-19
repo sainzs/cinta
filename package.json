@@ -1,5 +1,5 @@
 {
-  "name": "cinta",
+  "name": "@ssainzs/cinta",
   "version": "0.1.0",
   "description": "Animated terminal-capture GIFs for documentation — a pi extension",
   "type": "module",
